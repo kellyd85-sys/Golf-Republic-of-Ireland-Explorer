@@ -1,0 +1,55 @@
+/* Shared styles for the home and methodology pages (the finder has its own built-in styles) */
+:root{
+  --ink:#14251c; --muted:#5b6b62; --line:#d9e1db; --bg:#f5f3ec; --panel:#fff;
+  --green:#1f5d3c; --green-2:#2f7d52; --gold:#c9932e; --sea:#dce9ee;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:Inter,system-ui,sans-serif;color:var(--ink);background:var(--bg);font-size:16px;line-height:1.6}
+a{color:var(--green)}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+
+/* top bar */
+.topbar{background:var(--panel);border-bottom:1px solid var(--line)}
+.topbar .wrap{display:flex;align-items:center;gap:24px;height:60px}
+.brand{font-family:Fraunces,Georgia,serif;font-weight:700;font-size:19px;color:var(--ink);text-decoration:none;flex:1}
+.topbar nav a{color:var(--muted);text-decoration:none;font-size:14px;font-weight:500;margin-left:20px}
+.topbar nav a:hover,.topbar nav a.on{color:var(--green)}
+
+/* home hero */
+.hero{padding:72px 0 48px}
+.hero .k{font-size:13px;text-transform:uppercase;letter-spacing:.1em;color:var(--green-2);font-weight:600}
+.hero h1{font-family:Fraunces,Georgia,serif;font-weight:700;font-size:clamp(34px,5vw,54px);line-height:1.08;margin:10px 0 16px;letter-spacing:-.015em;max-width:760px}
+.hero p{font-size:18px;color:var(--muted);max-width:620px;margin:0}
+
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px;margin:8px 0 48px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:26px;text-decoration:none;color:inherit;display:block;transition:border-color .15s, transform .15s}
+.card:hover{border-color:var(--green);transform:translateY(-2px)}
+.card h2{font-family:Fraunces,Georgia,serif;font-weight:500;font-size:24px;margin:0 0 8px}
+.card p{color:var(--muted);margin:0 0 16px}
+.card .go{font-weight:600;color:var(--green)}
+
+.figures{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px;margin-bottom:56px}
+.figures div{border-top:2px solid var(--green);padding-top:10px}
+.figures b{display:block;font-family:Fraunces,Georgia,serif;font-size:32px;font-weight:500;color:var(--green)}
+.figures span{color:var(--muted);font-size:14px}
+
+/* methodology */
+.doc{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:40px 48px;margin:40px auto 56px;max-width:820px}
+.doc h1{font-family:Fraunces,Georgia,serif;font-size:36px;margin:0 0 6px}
+.doc h2{font-family:Fraunces,Georgia,serif;font-weight:500;font-size:24px;margin:36px 0 8px;padding-top:12px;border-top:1px solid var(--line)}
+.doc .lead{color:var(--muted);font-size:17px}
+.doc table{width:100%;border-collapse:collapse;font-size:14px;margin:12px 0}
+.doc th,.doc td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+.doc th{background:var(--bg)}
+.doc code,.doc pre{background:var(--bg);border-radius:6px;font-size:14px}
+.doc code{padding:1px 5px}
+.doc pre{padding:12px 14px;overflow:auto}
+.doc figure{margin:18px 0}
+.doc figure img{width:100%;border:1px solid var(--line);border-radius:10px}
+.doc figcaption{font-size:13px;color:var(--muted);margin-top:6px}
+.todo{background:#fff6e0;border:1px dashed #d9b866;border-radius:8px;padding:10px 14px;color:#6b4e12;font-size:14px}
+.placeholder{aspect-ratio:16/10;background:var(--sea);border:1px dashed #9fb3a6;border-radius:10px;display:grid;place-items:center;color:var(--muted);font-size:14px}
+.toc{columns:2;font-size:14px;padding-left:18px}
+@media (max-width:640px){.doc{padding:26px 20px}.toc{columns:1}}
+
+footer.site{border-top:1px solid var(--line);color:var(--muted);font-size:13px;padding:22px 0 30px}
